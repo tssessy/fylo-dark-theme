@@ -303,7 +303,7 @@
   .footer {
     position: relative;
     min-height: 50rem;
-    background-color: var(--clr-DarkBlueFooter);
+    background-color: var(--clr-DarkBlueTestimonials);
     display: grid;
     place-items: center;
     
