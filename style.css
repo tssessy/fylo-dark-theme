@@ -260,8 +260,13 @@
   /* !MAIN reviews */
   .reviews {
     display: flex;
-    padding: 0 11rem;
+    padding: 5rem 11rem 0 11rem;
     margin-bottom: 36rem;
+    background-image: url(./images/bg-quotes.png);
+    background-repeat: no-repeat;
+    background-position-x: 10rem;
+    background-position-y: 1rem;
+    z-index: 3;
   }
   .card {
     min-width: 20rem;
@@ -381,7 +386,7 @@
     background-color: #252A38;
     width: 66%;
     height: 56%;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     z-index: 2;
     left: 50%;
     transform: translate(-50%, -90%); 
