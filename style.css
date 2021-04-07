@@ -98,6 +98,9 @@
   /* ! */
 /* ! NAV */
   /* ! */
+  .navigation {
+    margin-bottom: 7rem;
+  }
   nav {
     display: flex;
     justify-content: space-between;
@@ -377,7 +380,7 @@
   .signup {
     position: absolute;
     background-color: #252A38;
-    width: 78%;
+    width: 66%;
     height: 56%;
     border-radius: 0.5rem;
     z-index: 2;
