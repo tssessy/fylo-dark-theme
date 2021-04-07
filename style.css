@@ -167,7 +167,7 @@
     display: grid;
     grid-template-columns: repeat (2, 2fr );
     grid-template-rows: repeat (2, 1fr );
-    column-gap: 20rem;
+    column-gap: 15rem;
     row-gap: 9rem;
     padding: 17rem 20rem 13rem 20rem;
     text-align: center;
