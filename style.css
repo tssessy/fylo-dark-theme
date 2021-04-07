@@ -290,7 +290,7 @@
   .name {
     align-self: flex-end;
   }
-  .name p {
+  .name h6 {
     font-weight: var(--fontW-700);
     font-size: 0.9rem;
     line-height: 0.2;
