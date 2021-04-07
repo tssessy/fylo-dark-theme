@@ -98,9 +98,7 @@
   /* ! */
 /* ! NAV */
   /* ! */
-  .navigation {
-    margin-bottom: 7rem;
-  }
+  
   nav {
     display: flex;
     justify-content: space-between;
@@ -149,6 +147,7 @@
     height: auto;
     margin: 0 auto;
     padding-bottom: 5rem;
+    padding-top: 7rem;
    }
     
   .hero h2 {
