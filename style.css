@@ -1,0 +1,630 @@
+:root {
+    /*! primary clr */
+    --clr-DarkBlue: #1c2431; /* intro and email Bg*/
+    --clr-DarkBlueMainBG: #181f2a;
+    --clr-DarkBlueTestimonials: #0b1523;
+    --clr-DarkBlueFooter: #202a3c;
+    /*! Accente Clr */
+    --clr-Cyan: #65e2d9; /*gradient*/
+    --clr-Blue: #339ecc; /*gradient*/
+    --clr-LightRed: #ff4242;
+
+    --clrWhite: #ffffff;
+  /* !font weight */
+    --fontW-400: 400;
+    --fontW-700: 700;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  /* Make images easier to work with */
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  /* Natural flow and rhythm in articles by default */
+  article > * + * {
+    margin-top: 1em;
+  }
+  body {
+    font-size: 1.4rem;
+    max-width: 1440px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: var(--fontW-400);
+    background-color: var(--clr-DarkBlueMainBG);
+    color: var(--clrWhite);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  button {
+    position: relative;
+    display:inline-block;
+    padding: 1.6rem 1rem;
+    width: 28rem;
+    border: none;
+    border-radius: 10rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    color: var(--clrWhite);
+    background: linear-gradient(var(--clr-Cyan), var(--clr-Blue));
+    font-size: 1.8rem;
+  }
+  button::before {
+    content: "";
+    position: absolute;
+    border-radius: 10rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.25);
+    opacity: 0;
+    transition: opacity 150 ms ease-in-out;
+  }
+  button:hover::before {
+    opacity: 1;
+    
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  ul li a {
+    color: var(--clrWhite);
+    text-decoration: none; 
+  }
+  a {
+    text-decoration: none;
+    color: var(--clrWhite);
+  }
+  h2,
+  h3, 
+  nav,
+  .btn {
+    font-family: 'Raleway', sans-serif;
+    font-weight: var(--fontW-700);
+  }
+  p {
+    line-height: 1.6;
+  }
+  /* ! */
+/* ! NAV */
+  /* ! */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 3rem 4rem 4.5rem;
+    background-color: var(--clr-DarkBlue);
+  }
+  nav img {
+    width: 75%;
+  }
+  nav li {
+    width: 9rem;
+    text-align: center;
+    /* border: 1px solid red; */
+  }
+  nav li:first-child {
+    padding-right: 1rem;
+  }
+  nav li a {
+    font-size: 2rem;
+    font-weight: var(--fontW-400);
+  }
+  nav li a:hover {
+    border-bottom: 1px solid var(--clrWhite);
+    font-weight: 600;
+  }
+  nav .menu {
+    display: flex;
+  }
+
+/* ! MAIN Hero */
+  
+  .hero {
+    background-color: var(--clr-DarkBlue);
+    background-image: url(./images/bg-curvy-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 27%;
+    text-align: center;
+    min-height: 100vh;
+    padding: 0 30rem;
+    margin: 0 auto;
+  }
+  .hero img {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+   }
+    
+  .hero h2 {
+    padding: 0 3.3rem;
+    font-size: 4rem;
+    line-height: 1.25;
+    margin-bottom: 4rem;
+  }
+  .hero p {
+    line-height: 1.4;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    padding: 0 4rem 3.5rem 4rem;
+  }  
+  /* !MAIN GRID-WRAP */
+  .grid-wrap {
+    display: grid;
+    grid-template-columns: repeat (2, 2fr );
+    grid-template-rows: repeat (2, 1fr );
+    column-gap: 25rem;
+    row-gap: 9rem;
+    padding: 17rem 20rem 13rem 20rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .grid-wrap > div { 
+    min-width: 26rem;
+  }
+  .grid-wrap img {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    height: 7.8rem;
+  }
+  .accsess {
+    grid-column: 1/2;
+  }
+  .security {
+    grid-column: 2/3;
+  }
+  .colaboration {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .storage {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .grid-wrap h3 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+
+
+
+
+
+
+  /* !MAIN Fylo Benefits */
+  .fylo-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 11rem;
+    align-items: center;
+    margin-bottom: 14rem;
+  }
+  .fylo-benefits img {
+    flex: 1.2;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .productivity {
+    padding-left: 5.5rem;
+    min-width: 26rem;
+    flex: 1;
+  }
+
+  .productivity h2 {
+    /* padding: 0 3.3rem; */
+    font-size: 4rem;
+    line-height: 1.25;
+    margin-bottom: 2.5rem;
+  }
+  .productivity p{
+    margin-bottom: 1.8rem;
+  }
+
+  .tryfylo {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      text-decoration: none;
+      color: var(--clr-Cyan);
+      border-bottom: 1px solid var(--clr-Cyan);
+  }
+  .tryfylo:hover {
+    color: white;
+    border-bottom:1px solid white;
+  }
+  .tryfylo:hover svg path {
+    fill: #000;
+  }
+  .tryfylo:hover svg use {
+    fill: #fff;
+  }
+
+
+
+  /* !MAIN reviews */
+  .reviews {
+    display: flex;
+    padding: 0 11rem;
+    margin-bottom: 36rem;
+  }
+  .card {
+    min-width: 20rem;
+    background-color: var(--clr-DarkBlueFooter);
+    border-radius: 0.5rem;
+    padding: 4rem 3rem 2.7rem 2.5rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem rgba(0,0,0,0.2) ;
+  }
+  .card + .card {
+    margin-left: 4rem;
+  }
+  .card p {
+    font-size: 1.3rem;
+  }
+  .user {
+    display: flex;
+    align-items: center;
+    margin-top: 2.6rem;
+  }
+  .user img {
+    border-radius: 50%;
+    width: 9%;
+    height: 9%;
+    margin-right: 0.8rem;
+  }
+  .name {
+    align-self: flex-end;
+  }
+  .name p {
+    font-weight: var(--fontW-700);
+    font-size: 0.9rem;
+    line-height: 0.2;
+  }
+  .name small {
+    opacity: 0.8;
+    font-size: 0.7rem;
+  }
+  /* ! Footer */
+  .footer {
+    position: relative;
+    min-height: 50rem;
+    background-color: var(--clr-DarkBlueFooter);
+    display: grid;
+    place-items: center;
+    
+  }
+  .positioning {
+    width: 100%;
+    padding-top: 20rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .first-item {
+    margin-bottom: 9rem;
+  }
+  .first-item img{
+    margin-bottom: 3.5rem;
+  }
+
+  .location {
+    display: flex;
+  }
+  .location img {
+    margin-right: 2.5rem;
+  }
+  .phone, .email {
+    display: flex;
+    width: 20rem;
+  }
+  .phone svg, .email svg {
+    margin-right: 2.5rem;
+  }
+  .phone svg:hover path, 
+  .email svg:hover path {
+    fill: var(--clr-Cyan);
+  }
+  .phone {
+    margin-bottom: 2rem;
+  }
+  
+  .footer p {
+    width: 40ch;
+  }
+  .footer img {
+    align-self: center;
+  }
+  .firstul {
+    margin-top: 5rem;
+  }
+  .secondul {
+    margin-top: 1.5rem;
+  }
+  .footer ul li a {
+    line-height: 2.3;
+  }
+  .footer ul li {
+    width: 8rem;
+  }
+  .contact a:hover, .firstul a:hover, .secondul a:hover  {
+    font-weight: 600;
+  }
+ 
+  .social {
+    padding-bottom: 3.2rem;
+  }
+  .social svg {
+    margin-left: 0.7rem;
+    cursor: pointer;
+  }
+  .social svg:hover path {
+    fill: var(--clr-Cyan);
+  }
+/* !position absolute Signup */
+  .signup {
+    position: absolute;
+    background-color: #252A38;
+    width: 78%;
+    height: 56%;
+    border-radius: 0.5rem;
+    z-index: 2;
+    left: 50%;
+    transform: translate(-50%, -90%); 
+    text-align: center;
+    box-shadow: 0.3rem 0.3rem 0.8rem rgba(0,0,0,0.5);
+  }
+  .signup h4 {
+    margin-top: 5rem;
+    margin-bottom: 2.6rem;
+    font-size: 3rem;
+
+  }
+  .signup p {
+    width: 80%;
+    padding: 0 2rem;
+    margin: 0 auto 3.6rem auto;
+  }
+  .signup input {
+    width: 60%;
+    height: 4.8rem;
+    border-radius: 10rem;
+    padding-left: 3rem;
+    border: none;
+    color: rgb(180, 178, 178);
+  }
+  
+  .signup button {
+    width: 25%;
+    height: 4.8rem;
+    padding: 1.3rem 1rem;
+    margin-left: 2.5rem;
+    display: inline-block;
+  }
+
+  .attribution { font-size: 11px; text-align: center; }
+  .attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media only screen and (max-width: 1024px){
+    .hero {
+      padding: 0 22rem;
+    }
+    .grid-wrap {
+      column-gap: 12rem;
+    }
+    /* !signup */
+    .signup input {
+      width: 50%;
+    }
+    .signup button {
+      width: 22%;
+      font-size: 1.4rem;
+    }
+  }
+  @media only screen and (max-width: 875px){
+    .hero {
+      padding: 0 12rem;
+    }
+    .fylo-benefits {
+      padding: 0 3rem;
+      flex-direction: column;
+    }
+    .productivity {
+      padding: 0 2rem;
+    }
+    .fylo-benefits img {
+      margin-bottom: 6rem;
+    }
+    .productivity h2 {
+      font-size: 3rem;
+    }
+    /*! reviews */
+    .reviews {
+      padding: 0 3rem;
+    }
+    .card + .card {
+      margin-left: 1.5rem;
+    }
+    /* !signup */
+    .signup {
+      height: 40%;
+      transform: translate(-50%, -122%);
+    }
+    .signup h4 {
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+  
+    }
+    .signup p {
+      width: 80%;
+      padding: 0 2rem;
+      margin: 0 auto 3rem auto;
+    }
+    .signup input {
+      width: 100%;
+      height: 4.8rem;
+      margin-bottom: 2rem;
+    }
+    
+    .signup button {
+      width: 100%;
+      height: 4.8rem;
+      margin: 0;
+      display: inline-block;
+    }
+    .signup form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 60%;
+      margin: 0 auto;
+    }
+    /*! footer */
+    .positioning {
+      flex-direction: column;
+      margin-top: 4rem;
+    }
+    .first-item {
+      display: flex;
+      margin-bottom: 2.5rem;
+    }
+    .first-item .location {
+      margin-left: 5rem;
+    }
+    .email, .firstul, .secondul {
+      text-align: center;
+    }
+    .secondul {
+      margin-bottom: 6rem;
+    }
+  }
+
+
+
+
+
+
+
+
+  @media only screen and (max-width: 675px){
+    nav {
+      padding: 4rem 2rem 4rem 2rem;
+    }
+    nav li {
+      width: 5.7rem;
+    }
+    nav li a {
+      font-size: 1.3rem;
+    }
+    .hero {
+      padding: 0;
+      background-image: url(.//images/bg-curvy-mobile.svg);
+      background-size: 100% 45%;
+      min-height: 50vh;
+      margin-bottom: 6rem;
+    }
+    .hero img {
+      padding-bottom: 2.5rem;
+    }
+    .hero h2 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      padding: 0 2rem 3.5rem 2rem;
+    }
+    .grid-wrap {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      padding: 5rem 3rem;
+      column-gap: 0;
+      row-gap: 5rem;
+      margin-bottom: 9rem;
+    }
+    .accsess {
+      grid-row: 1/2;
+      grid-column: 1/2;
+    }
+    .security {
+      grid-row: 2/3;
+      grid-column: 1/2;
+    }
+    .colaboration {
+      grid-row: 3/4;
+      grid-column: 1/2;
+    }
+    .storage {
+      grid-row: 4/5;
+      grid-column: 1/2;
+    }
+    /* !Reviews */
+    .reviews {
+      flex-direction: column;
+      margin-bottom: 35rem;
+    }
+    .card + .card {
+      margin-left: 0;
+      margin-top: 2rem;
+    }
+    /* !signup */
+    .signup {
+      height: 44%;
+      transform: translate(-50%, -115%);
+      padding-bottom: 3rem;
+    }
+    .signup form {
+      width: 80%;
+    }
+    /* !footer  */
+    .positioning {
+  
+      margin: 0 auto;
+      width: 55%;
+    }
+    .first-item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2.5rem;
+
+    }
+    .first-item img {
+      align-self: center;
+      margin-top: 5rem;
+    }
+    .first-item .location {
+      align-self: center;
+      margin-left: 1.5rem;
+    }
+    .contact {
+      align-self: center;
+      margin-left: 2rem;
+    }
+  }
