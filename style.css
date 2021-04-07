@@ -98,6 +98,9 @@
   /* ! */
 /* ! NAV */
   /* ! */
+  .navigation {
+    margin-bottom: 7rem;
+  }
   nav {
     display: flex;
     justify-content: space-between;
