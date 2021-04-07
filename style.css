@@ -103,7 +103,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 7rem 6rem 7rem 7.5rem;
+    padding: 7rem 6rem 3rem 7.5rem;
     background-color: var(--clr-DarkBlue);
   }
   nav img {
